@@ -36,13 +36,21 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
+<IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/home" >
+        {/* Página inicial */}
+        <Route exact path="/home">
           <Home />
         </Route>
-        <Route exact path="/Sobre">
+
+        {/* Página Sobre */}
+        <Route exact path="/sobre">
+          <Sobre />
+        </Route>
+
+        {/* Redireciona "/" para "/home" */}
+        <Route exact path="/">
           <Redirect to="/home" />
         </Route>
       </IonRouterOutlet>

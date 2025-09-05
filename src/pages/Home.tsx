@@ -15,7 +15,9 @@ const Home: React.FC = () => {
         <h2>Roberto dos Santos Pinto Filho</h2>
         <p>Código da turma: ADS-2025</p>
 
-        <IonButton routerLink='src/pages/Sobre.tsx'>Sobre mim</IonButton>
+        <IonButton expand="block" onClick={() => history.push('/sobre')}>
+          Sobre
+        </IonButton>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Blank</IonTitle>

@@ -15,7 +15,9 @@ const Home: React.FC = () => {
         <p>   Olá! Meu nome é Roberto, sou estudante de Análise e Desenvolvimento de Sistemas.  
           Gosto de programação e estou aprendendo a desenvolver aplicações móveis com Ionic + React.  </p>
 
-        <IonButton routerLink='/home'>Voltar ao cartão</IonButton>
+          <IonButton expand="block" onClick={() => history.push('/home')}>
+          Voltar
+        </IonButton>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Blank</IonTitle>
