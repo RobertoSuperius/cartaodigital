@@ -1,0 +1,53 @@
+.sobre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f0ff, #f9f9f9);
+  padding: 20px;
+  text-align: center;
+}
+
+.sobre-card {
+  margin:auto;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.sobre-card h2 {
+  font-size: 2rem;
+  color: #3880ff;
+  margin-bottom: 15px;
+}
+
+.sobre-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.botao-sobre {
+  --background: #4032ff;
+  --color: #ffffff;
+  --border-radius: 12px;
+  --padding-start: 0;
+  --padding-end: 0;
+  max-width: 220px;
+  margin: 0 auto;
+  transition: background 0.3s ease;
+}
+
+.botao-sobre:hover {
+  --background: #28dcd4;
+}

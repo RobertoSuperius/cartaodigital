@@ -1,29 +1,26 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonImg } from '@ionic/react';
+import { useHistory } from 'react-router-dom';
+import './Home.css'; // <-- Import do CSS
 
 const Home: React.FC = () => {
+  const history = useHistory();
+
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+        <IonToolbar color="primary">
+          <IonTitle>Cartão de Identificação</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding ion-text-center" fullscreen>
-        <img src='src/assets/BEBETO.png' width={300} height={300} style={{ borderRadius:"50%"}}></img>
-        <h2>Roberto dos Santos Pinto Filho</h2>
-        <p>Código da turma: ADS-2025</p>
-
-        <IonButton expand="block" onClick={() => history.push('/sobre')}>
-          Sobre
-        </IonButton>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <IonContent className="ion-padding home-container" fullscreen>
+        <div className="card">
+          <IonImg src="src/assets/BEBETO.png" alt="Minha Foto" className="foto" />
+          <h2 className="nome">Roberto Santos Pinto Filho</h2>
+          <p className="turma">Código da Turma: ADS123</p>
+          <IonButton expand="block" onClick={() => history.push('/sobre')}>
+            Ir para Sobre
+          </IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
